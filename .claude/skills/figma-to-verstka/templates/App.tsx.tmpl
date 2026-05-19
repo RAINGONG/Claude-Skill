@@ -1,0 +1,17 @@
+// Preview entry для React + Vite. Skill подставляет импорты компонентов и
+// контейнер с правильной шириной (mobile-first → desktop через min-w).
+//
+// Substitutions:
+//   {{IMPORTS}}            — импорты Header / Hero / etc
+//   {{COMPONENTS}}         — JSX-инлайн компонентов в порядке Y из Figma
+//   {{PAGE_MIN_WIDTH}}     — '1920px' для desktop pages, '375px' для mobile-only
+
+{{IMPORTS}}
+
+export default function App() {
+  return (
+    <div className="min-w-[{{PAGE_MIN_WIDTH}}]">
+      {{COMPONENTS}}
+    </div>
+  );
+}

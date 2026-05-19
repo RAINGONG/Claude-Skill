@@ -1,0 +1,18 @@
+// Preview entry для Next.js App Router. Создаётся в app/_preview/page.tsx.
+// Server Component по умолчанию. Если хоть один из компонентов в COMPONENTS
+// требует 'use client' — клиент-обёртку добавит сам компонент, не эта страница.
+//
+// Substitutions:
+//   {{IMPORTS}}            — импорты Header / Hero / etc
+//   {{COMPONENTS}}         — JSX-инлайн компонентов в порядке Y из Figma
+//   {{PAGE_MIN_WIDTH}}     — '1920px' для desktop pages, '375px' для mobile-only
+
+{{IMPORTS}}
+
+export default function PreviewPage() {
+  return (
+    <div className="min-w-[{{PAGE_MIN_WIDTH}}]">
+      {{COMPONENTS}}
+    </div>
+  );
+}

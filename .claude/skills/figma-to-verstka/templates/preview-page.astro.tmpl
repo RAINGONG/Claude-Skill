@@ -1,0 +1,24 @@
+---
+// Preview entry для Astro. Создаётся в src/pages/_preview.astro.
+// Static-only по умолчанию. Если хоть один компонент — interactive island,
+// добавь `client:load` (или `client:visible`) у соответствующего тега.
+//
+// Substitutions:
+//   {{IMPORTS}}            — импорты Header / Hero / etc (Astro или React)
+//   {{COMPONENTS}}         — JSX-инлайн компонентов в порядке Y из Figma
+//   {{PAGE_MIN_WIDTH}}     — '1920px' для desktop pages, '375px' для mobile-only
+
+{{IMPORTS}}
+---
+
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <title>Preview</title>
+  </head>
+  <body>
+    <div class={`min-w-[{{PAGE_MIN_WIDTH}}]`}>
+      {{COMPONENTS}}
+    </div>
+  </body>
+</html>
